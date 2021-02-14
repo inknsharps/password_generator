@@ -7,7 +7,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Arrays for characters
@@ -26,7 +25,8 @@ var specialArray = specialCharacters.split("");
 
 // Generate a new password functionality
 function generatePassword() {
-  
+  // Reset choices for characters to be generated
+  var filteredArray = [];
   // Prompts user for password length, and set passwordLength variable to a number from 8-128
   var passwordLength = prompt("How long should the password be?\n Please type in a number from 8 to 128.");
     if (passwordLength === null) {
@@ -35,18 +35,38 @@ function generatePassword() {
       alert("You must type in a number from 8 to 128!");
       generatePassword();
     } else {
-    // Password character inclusion variables, sets to true or false
-    var includeLowercase = confirm("Do you want lowercase letters in this password?");
-    var includeUppercase = confirm("Do you want uppercase letters in this password?");
-    var includeNumber = confirm("Do you want numbers in this password?");
-    var includeSpecial = confirm("Do you want special characters in this password?");
-      if (includeLowercase === false && includeUppercase === false && includeNumber === false && includeSpecial === false) {
-        alert("You must select at least one character type to include!");
-        generatePassword();
-      }                           
-    } 
+      // Password character inclusion variables and array edits
+      var includeLowercase = confirm("Do you want lowercase letters in this password?");
+        if (includeLowercase === true) {
+          var step1Array = [...lowercaseArray];
+        } else {
+          step1Array = [];
+        }
+      var includeUppercase = confirm("Do you want uppercase letters in this password?");
+        if (includeUppercase === true) {
+          var step2Array = [...step1Array, ...uppercaseArray];
+        } else {
+          step2Array = [...step1Array];
+        }
+      var includeNumber = confirm("Do you want numbers in this password?");
+        if (includeNumber === true) {
+          var step3Array = [...step2Array, ...numArray];
+        } else {
+          step3Array = [...step2Array];
+        }
+      var includeSpecial = confirm("Do you want special characters in this password?");
+        if (includeSpecial === true) {
+          filteredArray = [...step3Array, ...specialArray];
+        } else {
+          filteredArray = [...step3Array];
+        }
+        // Failsafe in case user selects no character options
+        if (includeLowercase === false && includeUppercase === false && includeNumber === false && includeSpecial === false) {
+          alert("You must select at least one character type to include!");
+          generatePassword();
+        }
+    }
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// Password Random generator
