@@ -35,6 +35,7 @@ function generatePassword() {
     // Failsafe for user entering a number outside of intended values
     } else if (passwordLength < 8 || passwordLength > 128) {
       alert("You must type in a number from 8 to 128!\nClick \"Generate Password\" again.");
+      return "Error!";
     } else {
       // Character type selection prompts for creating the filteredArray, that will be used for password generation
       var includeLowercase = confirm("Do you want lowercase letters in this password?");
@@ -64,6 +65,7 @@ function generatePassword() {
         // Failsafe in case user selects no to all character options
         if (includeLowercase === false && includeUppercase === false && includeNumber === false && includeSpecial === false) {
           alert("You must select at least one character type to include to generate a password!\nClick \"Generate Password\" again.");
+          return "Error!";
         }
     }   
     // Initialize array for randomly generated password
