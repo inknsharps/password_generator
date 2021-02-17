@@ -6,7 +6,6 @@ This is a password generator that can generate a password using a selection of l
 
 * Generate a random password in length from 8-128 characters.
 * Choose to include lowercase, uppercase, numbers and/or special characters to your generated password.
-* Easily add more characters to the generation pool by editing the character arrays in `script.js`.
 
 ## Usage
 <br>
