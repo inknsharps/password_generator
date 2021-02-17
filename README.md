@@ -27,8 +27,9 @@ v1's Javascript code utilized predefined arrays for the character types and appe
 
 <figure>
   <img src="./assets/v1_logic.jpg">
-  <figcaption>Lots of array, and statements.</figcaption>
+  <figcaption style="font-size: 10px; padding-left: 25vh;">Lots of arrays and statements.</figcaption>
 </figure>
+<br>
 
 v2 aims to cut down on the array reliance. It instead utilitizes a `.fromCharCode` method to generate characters randomly based on their UTF-16 character code. Unfortunately, this doesn't work great for symbols, so this is still defined as a string, but instead of converting it to an array, a simple `.charAt` method was applied to randomly pull a value from there. 
 Another result of cutting down on array reliance is instead of generating a long array in which the password is generated from, we use the following sequence:
@@ -41,7 +42,7 @@ This way, we only make use of **two arrays** in the entire solution. Pretty cool
 
 <figure>
   <img src="./assets/v2_logic.jpg">
-  <figcaption>Much more clean!</figcaption>
+  <figcaption style="font-size: 10px; padding-left: 25vh;">Much more clean!</figcaption>
 </figure>
 
 ## Credits
