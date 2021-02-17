@@ -34,9 +34,9 @@ v2 aims to cut down on the array reliance. It instead utilitizes a `.fromCharCod
 Another result of cutting down on array reliance is instead of generating a long array in which the password is generated from, we use the following sequence:
 <br>
 
-1. We randomly generate a short array, which contains characters of the types we've chosen
-2. We grab a value from that short array and add it to our final password
-3. Repeat steps one and two until the password length is met.
+    1. We randomly generate a short array, which contains characters of the types we've chosen
+    2. We grab a value from that short array and add it to our final password
+    3. Repeat steps one and two until the password length is met.
 
 This way, we only make use of **two arrays** in the entire solution. Pretty cool, huh?
 
@@ -47,9 +47,9 @@ This way, we only make use of **two arrays** in the entire solution. Pretty cool
 
 In addition, the failsafes have been adjusted slightly. In particular, making use of the `parseInt()` function and `Number.isNaN()` function in the code has consolidated three `if...else` statements into one where:
 
-1. The user clicks cancel when selecting a value 
-2. The user types in a non `number` value
-3. The user types in a `number` not from 8-128
+    1. The user clicks cancel when selecting a value 
+    2. The user types in a non `number` value
+    3. The user types in a `number` not from 8-128
 
 <figure>
   <img src="./assets/v1_prompt_failsafe.jpg">
