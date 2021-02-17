@@ -27,7 +27,7 @@ v1's Javascript code utilized predefined arrays for the character types and appe
 
 <figure>
   <img src="./assets/v1_logic.jpg">
-  <figcaption style="font-size: 10px; padding-left: 25vh;">Lots of arrays and statements.</figcaption>
+  <figcaption><sup>Lots of arrays and statements.</sup></figcaption>
 </figure>
 <br>
 
@@ -42,7 +42,7 @@ This way, we only make use of **two arrays** in the entire solution. Pretty cool
 
 <figure>
   <img src="./assets/v2_logic.jpg">
-  <figcaption style="font-size: 10px; padding-left: 25vh;">Much more clean!</figcaption>
+  <figcaption><sup>Much more clean!</sup></figcaption>
 </figure>
 
 ## Credits
