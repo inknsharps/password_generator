@@ -1,6 +1,6 @@
 # Random Password Generator
 
-This is a password generator that can generate a password using a selection of lowercase/uppercase letters, numbers and special characters. Any additional characters that you wish to add to those groups can be added without breaking functionality.
+This is a password generator that can generate a password using a selection of lowercase/uppercase letters, numbers and special characters.
 
 ## Features
 
@@ -30,7 +30,7 @@ v1's Javascript code utilized predefined arrays for the character types and appe
   <figcaption><sup>Lots of arrays and statements.</sup></figcaption>
 </figure>
 <br>
-
+<br>
 v2 aims to cut down on the array reliance. It instead utilitizes a `.fromCharCode` method to generate characters randomly based on their UTF-16 character code. Unfortunately, this doesn't work great for symbols, so this is still defined as a string, but instead of converting it to an array, a simple `.charAt` method was applied to randomly pull a value from there. 
 Another result of cutting down on array reliance is instead of generating a long array in which the password is generated from, we use the following sequence:
 
