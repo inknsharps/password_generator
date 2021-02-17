@@ -52,13 +52,13 @@ In addition, the failsafes have been adjusted slightly. In particular, making us
     3. The user types in a `number` not from 8-128
 
 <figure>
-  <img src="./assets/v1_prompt_failsafe.jpg">
-  <figcaption><sup>Here is v1's three if...else statements...</sup></figcaption>
+    <figcaption><sup>Here is v1's three if...else statements...</sup></figcaption>
+    <img src="./assets/v1_prompt_failsafe.jpg">
 </figure>
 
 <figure>
-  <img src="./assets/v2_prompt_failsafe.jpg">
-  <figcaption><sup>...and v2 takes those three statements and combines them into one.</sup></figcaption>
+    <figcaption><sup>...and v2 takes those three statements and combines them into one.</sup></figcaption>
+    <img src="./assets/v2_prompt_failsafe.jpg">
 </figure>
 
 ## Credits
