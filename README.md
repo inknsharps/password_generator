@@ -33,6 +33,7 @@ v1's Javascript code utilized predefined arrays for the character types and appe
 v2 aims to cut down on the array reliance. It instead utilitizes a `.fromCharCode` method to generate characters randomly based on their UTF-16 character code. Unfortunately, this doesn't work great for symbols, so this is still defined as a string, but instead of converting it to an array, a simple `.charAt` method was applied to randomly pull a value from there. 
 Another result of cutting down on array reliance is instead of generating a long array in which the password is generated from, we use the following sequence:
 
+
 1. We randomly generate a short array, which contains characters of the types we've chosen
 2. We grab a value from that short array and add it to our final password
 3. Repeat steps one and two until the password length is met.
