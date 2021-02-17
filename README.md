@@ -25,8 +25,8 @@ Link to a deployed version online can be found <a href="https://inknsharps.githu
 v1's Javascript code utilized predefined arrays for the character types and appended them together with the spread/`...` syntax, based on a sequence of `if...else` statements. The downside of this is the need of declaring new arrays each time a character type needed to be added to create the final array in which the password would be generated from. The code used a total of **9 different arrays!**
 
 <figure>
-  <img src="./assets/v1_logic.jpg">
-  <figcaption><sup>Lots of arrays and statements.</sup></figcaption>
+    <figcaption><sup>Lots of arrays and statements.</sup></figcaption>
+    <img src="./assets/v1_logic.jpg">
 </figure>
 <br>
 <br>
@@ -41,8 +41,8 @@ Another result of cutting down on array reliance is instead of generating a long
 This way, we only make use of **two arrays** in the entire solution. Pretty cool, huh?
 
 <figure>
-  <img src="./assets/v2_logic.jpg">
-  <figcaption><sup>Much more clean!</sup></figcaption>
+    <figcaption><sup>Much more clean!</sup></figcaption>
+    <img src="./assets/v2_logic.jpg">
 </figure>
 
 In addition, the failsafes have been adjusted slightly. In particular, making use of the `parseInt()` function and `Number.isNaN()` function in the code has consolidated three `if...else` statements into one where:
