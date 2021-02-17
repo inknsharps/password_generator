@@ -25,6 +25,11 @@ Link to a deployed version online can be found <a href="https://inknsharps.githu
 
 v1's Javascript code utilized predefined arrays for the character types and appended them together with the spread/`...` syntax, based on a sequence of `if...else` statements. The downside of this is the need of declaring new arrays each time a character type needed to be added to create the final array in which the password would be generated from. The code used a total of **9 different arrays!**
 
+<figure>
+  <img src="./assets/v1_logic.jpg">
+  <figcaption>Lots of array, and statements.</figcaption>
+</figure>
+
 v2 aims to cut down on the array reliance. It instead utilitizes a `.fromCharCode` method to generate characters randomly based on their UTF-16 character code. Unfortunately, this doesn't work great for symbols, so this is still defined as a string, but instead of converting it to an array, a simple `.charAt` method was applied to randomly pull a value from there. 
 Another result of cutting down on array reliance is instead of generating a long array in which the password is generated from, we use the following sequence:
 
@@ -34,9 +39,15 @@ Another result of cutting down on array reliance is instead of generating a long
 
 This way, we only make use of **two arrays** in the entire solution. Pretty cool, huh?
 
+<figure>
+  <img src="./assets/v2_logic.jpg">
+  <figcaption>Much more clean!</figcaption>
+</figure>
+
 ## Credits
 
 Columbia Engineering BCS for the initial HTML, CSS and JS work.
+<br>
 Florin Pop's <a href="https://codepen.io/FlorinPop17/pen/BaBePej">Random Password Generator</a> for inspiration on random password generation logic.
 
 ## Disclaimer
